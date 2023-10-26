@@ -24,11 +24,15 @@ body {
   NAVBAR
 */
 
+.show {
+  display: flex !important;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5%;
+  padding: 0 5%;
 }
 
 nav ul {
@@ -74,6 +78,7 @@ nav .menu {
   display: none;
   flex-direction: column;
   min-width: 200px;
+  margin-top: 48px;
 
   background-color: #fff;
 }
@@ -95,20 +100,77 @@ nav .mobile {
 }
 
 nav .mobile .header {
-  background-color: #00f;
   display: flex;
   text-align: center;
   justify-content: space-between;
   flex-direction: row;
+
+  background-color: #000;
+}
+
+nav .mobile .header a {
+  color: #fff;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav .mobile .header a img {
+  width: 120px;
+}
+
+nav .mobile .header #bmenu {
+  border: none;
+  background-color: transparent; 
+  cursor: pointer;
+
+  color: #fff;
 }
 
 nav .mobile .links {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
+  z-index: 200;
+
+  background-color: #000;
 }
 
-@media screen and (max-width: 943px) {
+nav .mobile .links a {
+  font-size: 20px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  color: #fff;
+}
+
+nav .mobile .links a:hover {
+  font-size: 20px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  color: #000;
+  background-color: #fff;
+}
+
+nav ul li a img {
+  width: 110px;
+}
+
+/* 
+  HEADER
+*/
+
+header {
+  background-image: url(/halo/src/assets/img/halo-infinite-cover-darkmode.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1097px) {
   nav .link-hide {
     display: none;
   }
@@ -116,9 +178,17 @@ nav .mobile .links {
   nav .more {
     display: flex;
   }
+
+  
+header {
+  height: 70vh;
+  background-position: center 1px;
+  background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 537px) {
+}
+
+@media screen and (max-width: 651px) {
   nav {
     width: 100%;
     padding: 0;
@@ -129,6 +199,13 @@ nav .mobile .links {
   }
 
   nav .mobile {
-    display: flex;
+    display: block;
   }
+
+  
+header {
+  height: 40vh;
+  background-position: center 40px;
+}
+
 }
